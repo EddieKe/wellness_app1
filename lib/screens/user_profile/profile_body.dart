@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:wellness_app/utilities/constants_2.dart';
 import 'package:wellness_app/utilities/dimensions2.dart';
-
 import 'package:wellness_app/screens/user_profile/profile_form.dart';
 
 class ProfileBody extends StatelessWidget {
-  const ProfileBody({super.key, required double screenWidth});
+  final double screenWidth; // Declare the screenWidth variable
+
+  const ProfileBody({super.key, required this.screenWidth}); // Update the constructor to accept screenWidth
 
   @override
   Widget build(BuildContext context) {
@@ -13,8 +14,7 @@ class ProfileBody extends StatelessWidget {
       child: SizedBox(
         width: double.infinity,
         child: Padding(
-          padding:
-              EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
+          padding: EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
           child: SingleChildScrollView(
             child: Column(
               children: [
@@ -25,7 +25,7 @@ class ProfileBody extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(height: Dimensions2.screenHeight * 0.06),
-                const CompleteProfileForm(),
+                const CompleteProfileForm(), // Use CompleteProfileForm directly without const
                 SizedBox(height: getProportionateScreenHeight(30)),
                 Text(
                   "By continuing your confirm that you agree \nwith our Term and Condition",
