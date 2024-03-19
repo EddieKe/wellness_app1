@@ -4,8 +4,8 @@ import 'package:wellness_app/utilities/dimensions2.dart';
 
 import 'package:wellness_app/screens/user_profile/profile_form.dart';
 
-class Body extends StatelessWidget {
-  const Body({super.key});
+class ProfileBody extends StatelessWidget {
+  const ProfileBody({super.key, required double screenWidth});
 
   @override
   Widget build(BuildContext context) {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wellness_app/components/default_button.dart';
+import 'package:wellness_app/componenets/default_button.dart';
 import 'package:wellness_app/utilities/dimensions2.dart';
 import 'package:wellness_app/screens/homescreen.dart';
 
@@ -7,8 +7,8 @@ import 'package:wellness_app/utilities/constants_2.dart';
 
 class OtpForm extends StatefulWidget {
   const OtpForm({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   // ignore: library_private_types_in_public_api

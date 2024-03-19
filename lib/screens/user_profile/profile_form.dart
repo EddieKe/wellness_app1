@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:wellness_app/components/custom_surfix_icon.dart';
-import 'package:wellness_app/components/default_button.dart';
-import 'package:wellness_app/components/form_error.dart';
+import 'package:wellness_app/componenets/custom_surfix_icon.dart';
+import 'package:wellness_app/componenets/default_button.dart';
+import 'package:wellness_app/componenets/form.dart';
+
 import 'package:wellness_app/screens/otp_screen/otp_screen.dart';
 
 import 'package:wellness_app/utilities/constants_2.dart';
