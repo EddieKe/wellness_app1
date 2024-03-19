@@ -6,6 +6,7 @@ import 'package:wellness_app/widgets/bottom_nav_bar.dart';
 import 'package:wellness_app/widgets/search_bar1.dart';
 
 class DetailsScreen extends StatelessWidget {
+  static String routeName = "/home";
   const DetailsScreen({super.key});
 
   @override

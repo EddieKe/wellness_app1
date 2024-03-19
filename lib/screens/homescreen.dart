@@ -4,10 +4,11 @@ import 'package:wellness_app/screens/details_screen.dart';
 import 'package:wellness_app/widgets/bottom_nav_bar.dart';
 import 'package:wellness_app/widgets/category_card.dart';
 import 'package:wellness_app/widgets/search_bar1.dart'; // Importing SearchBar1 widget
+import 'package:wellness_app/screens/user_profile/user_profile_screen.dart';
 
 class HomeScreen extends StatelessWidget {
-   // ignore: prefer_const_constructors_in_immutables
-   HomeScreen({super.key}); // Added Key parameter
+  static String routeName = "/home";
+  const HomeScreen({super.key}); // Added Key parameter
 
   @override
   Widget build(BuildContext context) {
@@ -34,15 +35,26 @@ class HomeScreen extends StatelessWidget {
                 children: <Widget>[
                   Align(
                     alignment: Alignment.topRight,
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 52,
-                      width: 52,
-                      decoration: const BoxDecoration(
-                        color: Color(0xFFF2BEA1),
-                        shape: BoxShape.circle,
+                    child: GestureDetector(
+                      onTap: () {
+                        // Navigate to user profile screen when the menu icon is tapped
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => UserProfileScreen(),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: 52,
+                        width: 52,
+                        decoration: const BoxDecoration(
+                          color: Color(0xFFF2BEA1),
+                          shape: BoxShape.circle,
+                        ),
+                        child: SvgPicture.asset("assets/icons/menu.svg"),
                       ),
-                      child: SvgPicture.asset("assets/icons/menu.svg"),
                     ),
                   ),
                   Text(
